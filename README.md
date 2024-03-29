@@ -22,6 +22,12 @@ file! Example:
   "image": "ghcr.io/hapag-lloyd/fluent-bit-multiline:edge",
   "name": "log_router",
   "memoryReservation": 50,
+  "healthCheck": {
+    "command": ["CMD-SHELL","curl -s http://127.0.0.1:2020/api/v1/health || exit 1"],
+    "interval": 30,
+    "timeout": 5,
+    "retries": 3
+  },
   "firelensConfiguration": {
     "type": "fluentbit",
     "options": {
