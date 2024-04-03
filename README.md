@@ -15,13 +15,14 @@ Go to the [FluentBit Documentation](https://docs.fluentbit.io/manual/administrat
 ## Usage
 
 Use this image inside of container definitions for AWS ECS Services. Make sure to reference the custom configuration
-file! 
+file!
 
 Note: Using the `edge` tag serves as an example here and is not recommended for productive use!
 Just like with the `latest` tag, it is unknown what exact version will be used or is currently in use.
 See [this blog post](https://vsupalov.com/docker-latest-tag/) for more details on this topic.
 
 Example:
+
 ```json
 {
   "image": "ghcr.io/hapag-lloyd/fluent-bit-multiline:edge",
