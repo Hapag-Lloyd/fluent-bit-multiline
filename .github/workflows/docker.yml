@@ -1,0 +1,16 @@
+---
+name: Build & Publish Docker Image
+
+# Only build the image if a release was created.
+# This guarantees the commit is tagged and on main branch.
+# (see https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases)
+on: release
+
+jobs:
+  default:
+    uses: Hapag-Lloyd/Repository-Templates/.github/workflows/default_docker_callable.yml@13628b3a168ca0096a52ecf93fa1a92295580a9f
+    secrets: inherit
+    with:
+      image-name: "fluent-bit-multiline"
+      upload-security-scan-results: true
+      push: true
