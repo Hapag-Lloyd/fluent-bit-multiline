@@ -1,9 +1,11 @@
 ---
 name: Build & Publish Docker Image
 
-# Only build the image if a release was created.
+# Only builds the image if a release was created.
 # This guarantees the commit is tagged and on main branch.
 # (see https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases)
+
+# yamllint disable-line rule:truthy
 on: release
 
 jobs:
