@@ -15,18 +15,6 @@ jobs:
     uses: Hapag-Lloyd/Workflow-Templates/.github/workflows/docker_dockerhub_release_callable.yml@a28fa2f991164959262587011188af99a7f0cb20
     secrets: inherit
     with:
-      # TODO insert correct value for image-name
-      # type: string
-      # required: true
-      # description: Name of the image. Usually it is sensible to set this to the repository name
-      image-name: "my-special-value"
-      # TODO insert correct value for push
-      # type: boolean
-      # required: false
-      # description: Flag to enable the workflow to actually push the built image to the registry
-      push: "my-special-value"
-      # TODO insert correct value for upload-security-scan-results
-      # type: boolean
-      # required: false
-      # description: Upload results of trivy scan of docker image to Github Security page
-      upload-security-scan-results: "my-special-value"
+      image-name: "fluent-bit-multiline"
+      upload-security-scan-results: true
+      push: true
