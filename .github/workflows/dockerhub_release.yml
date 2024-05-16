@@ -1,16 +1,18 @@
 ---
-name: Build & Publish Docker Image
+name: Build & Push Docker Image
 
 # Only builds the image if a release was created.
 # This guarantees the commit is tagged and on main branch.
 # (see https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases)
 
 # yamllint disable-line rule:truthy
-on: release
+on:
+  release:
 
 jobs:
   default:
-    uses: Hapag-Lloyd/Repository-Templates/.github/workflows/default_docker_callable.yml@aa06a3d8a580efc719d66bafdcb5d2ca6613cdea
+    # yamllint disable-line rule:line-length
+    uses: Hapag-Lloyd/Workflow-Templates/.github/workflows/docker_dockerhub_release_callable.yml@a28fa2f991164959262587011188af99a7f0cb20
     secrets: inherit
     with:
       image-name: "fluent-bit-multiline"
