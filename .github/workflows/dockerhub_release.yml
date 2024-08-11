@@ -12,7 +12,7 @@ on:
 jobs:
   default:
     # yamllint disable-line rule:line-length
-    uses: Hapag-Lloyd/Workflow-Templates/.github/workflows/docker_dockerhub_release_callable.yml@e08f390d968322fd66ff5ee4ea826015e23f04c6
+    uses: Hapag-Lloyd/Workflow-Templates/.github/workflows/docker_dockerhub_release_callable.yml@e58bc055e14da4c9636b1b39357f89fcd512b27a
     secrets: inherit
     with:
       image-name: "fluent-bit-multiline"
