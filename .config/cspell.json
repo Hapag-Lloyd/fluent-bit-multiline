@@ -1,49 +1,54 @@
 {
+  "import": ["@cspell/dict-cspell-bundle/cspell-ext.json"],
   "version": "0.2",
   "language": "en",
-  "words": [
-    "cpus",
-    "Hapag",
-    "Infracost",
-    "oidc",
-    "Repology",
-    "tflint",
-    "tfsec"
+  "ignorePaths": [
+    ".git/",
+    ".idea/",
+    ".config/dictionaries/",
+    "**/.infracost/**",
+    "**/.terraform/**",
+    "**/*.tfstate.*",
+    "**/node_modules/**"
   ],
-  "ignoreWords": [
-    "Buildx",
-    "DOCKERHUB",
-    "amannn",
-    "aquasecurity",
-    "automerge",
-    "automerged",
-    "buildcache",
-    "buildx",
-    "codeowners",
-    "codeql",
-    "conventionalcommits",
-    "datasource",
-    "dorny",
-    "firelens",
-    "fluentbit",
-    "hadolint",
-    "healthcheck",
-    "hlag",
-    "hmarr",
-    "ibiqlik",
-    "kayman",
-    "ludeeus",
-    "markdownlint",
-    "mktemp",
-    "ossrh",
-    "pascalfrenz",
-    "rhysd",
-    "ruleset",
-    "sarif",
-    "shellcheck",
-    "shuf",
-    "shunsuke",
-    "signoff",
-    "vuln"
+  "dictionaries": [
+    "workflow",
+    "maven",
+    "python",
+    "docker",
+    "simple",
+    "terraform-module",
+    "project"
+  ],
+  "dictionaryDefinitions": [
+    {
+      "name": "workflow",
+      "path": "dictionaries/workflow.txt"
+    },
+    {
+      "name": "maven",
+      "path": "dictionaries/maven.txt"
+    },
+    {
+      "name": "python",
+      "path": "dictionaries/python.txt"
+    },
+    {
+      "name": "docker",
+      "path": "dictionaries/docker.txt"
+    },
+    {
+      "name": "simple",
+      "path": "dictionaries/simple.txt"
+    },
+    {
+      "name": "terraform-module",
+      "path": "dictionaries/terraform-module.txt"
+    },
+    {
+      "name": "project",
+      "path": "dictionaries/project.txt",
+      "addWords": true
+    }
   ]
 }
