@@ -5,29 +5,8 @@ name: Build & Push Docker Image
 # This guarantees the commit is tagged and on main branch.
 # (see https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases)
 
-# USE_WORKFLOW
 ## yamllint disable-line rule:truthy
-on:
-  workflow_call:
-    inputs:
-      image-name:
-        type: string
-        required: true
-        description: "Name of the image. Usually it is sensible to set this to the repository name"
-      push:
-        type: boolean
-        required: false
-        description: "Flag to enable the workflow to actually push the built image to the registry"
-        default: false
-      upload-security-scan-results:
-        type: boolean
-        required: false
-        description: "Upload results of trivy scan of docker image to Github Security page"
-        default: false
-# /USE_WORKFLOW
-# USE_REPOSITORY
-## yamllint disable-line rule:truthy
-#on: release
+on: push
 # /USE_REPOSITORY
 
 jobs:
