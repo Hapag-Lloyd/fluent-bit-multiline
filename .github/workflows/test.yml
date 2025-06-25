@@ -47,17 +47,6 @@ jobs:
           tags: ${{ env.IMAGE_NAME }}:trivy-scan
           cache-from: type=gha
           cache-to: type=gha,mode=max
-      - name: Run Trivy vulnerability scanner
-        uses: aquasecurity/trivy-action@6c175e9c4083a92bbca2f9724c8a5e33bc2d97a5 # 0.30.0
-        with:
-          image-ref: ${{ env.IMAGE_NAME }}:trivy-scan
-          format: "sarif"
-          output: "trivy-results.sarif"
-      - name: Upload Trivy scan results to GitHub Security tab
-        uses: github/codeql-action/upload-sarif@ff0a06e83cb2de871e5a09832bc6a81e7276941f # v3.28.18
-        if: ${{ inputs.upload-security-scan-results }}
-        with:
-          sarif_file: "trivy-results.sarif"
       - name: Build and push image
         uses: docker/build-push-action@1dc73863535b631f98b2378be8619f83b136f4a0 # v6.17.0
         with:
