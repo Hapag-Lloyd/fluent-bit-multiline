@@ -30,8 +30,8 @@ Example:
   "memoryReservation": 50,
   "healthCheck": {
     "command": ["CMD-SHELL","curl -s http://127.0.0.1:2020/api/v1/health || exit 1"],
-    "interval": 30,
     "timeout": 5,
+    "interval": 30,
     "retries": 3
   },
   "firelensConfiguration": {
