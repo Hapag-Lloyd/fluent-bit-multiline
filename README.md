@@ -10,7 +10,8 @@ log in JSON format (for ex. to Datadog or OpenSearch).
 For more information, see here: [Example from AWS](https://github.com/aws-samples/amazon-ecs-firelens-examples/tree/mainline/examples/fluent-bit/filter-multiline-partial-message-mode)
 
 The config also configures the container to provide an endpoint for healthcheck data.
-Go to the [FluentBit Documentation](https://docs.fluentbit.io/manual/administration/monitoring#health-check-for-fluent-bit) for more information.
+Go to the [FluentBit Documentation](https://docs.fluentbit.io/manual/administration/monitoring#health-check-for-fluent-bit)
+for more information.
 
 ## Usage
 
@@ -30,8 +31,8 @@ Example:
   "memoryReservation": 50,
   "healthCheck": {
     "command": ["CMD-SHELL","curl -s http://127.0.0.1:2020/api/v1/health || exit 1"],
-    "interval": 30,
     "timeout": 5,
+    "interval": 30,
     "retries": 3
   },
   "firelensConfiguration": {
